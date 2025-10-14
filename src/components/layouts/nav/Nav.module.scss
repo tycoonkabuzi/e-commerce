@@ -4,7 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $global-standard-padding;
+  padding-left: $global-standard-padding;
+  padding-right: $global-standard-padding;
+  padding-top: $space-sm;
+  padding-bottom: $space-sm;
 
   ul {
     display: flex;

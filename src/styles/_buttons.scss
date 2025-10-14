@@ -2,6 +2,7 @@
 @use "./mixins" as *;
 
 @mixin buttons {
+  align-self: flex-start;
   border: none;
   border: solid 1px $accent-color;
   border-radius: 10px;

@@ -2,6 +2,7 @@
 @use "../../../styles/typography" as *;
 @use "../../../styles/mixins" as *;
 @use "../../../styles/buttons" as *;
+
 .header {
   background-color: rgb(232, 232, 232);
   color: $primary-text-color;
@@ -9,30 +10,52 @@
   box-sizing: border-box;
   padding: $bigger-padding;
   gap: 5%;
-  align-items: center;
+
   span {
     display: block;
     font-size: 40px;
   }
   .shop_hero {
     width: 40%;
+    h1 {
+      margin-bottom: $space-md;
+    }
   }
   .sample_product {
     background-color: $card-color;
     padding: $card-padding;
     display: flex;
     @include border-circular;
-
+    align-items: center;
     .text {
       width: 60%;
       position: relative;
+      h2 {
+        margin-bottom: $space-sm;
+        font-weight: 500;
+      }
       .price {
         display: flex;
         gap: 5%;
+        margin-bottom: $space-sm;
         p {
           color: $secondary-text-color;
           text-decoration: line-through;
         }
+      }
+      .view_more {
+        display: flex;
+        align-items: center;
+        color: $secondary-text-color;
+        font-weight: 300;
+      }
+      p {
+        color: $secondary-text-color;
+        margin-bottom: $space-sm;
+      }
+      .stars {
+        color: $accent-color;
+        margin-bottom: $space-sm;
       }
     }
   }
@@ -41,8 +64,8 @@
   }
   .image {
     width: 30%;
-    top: 30%;
-    right: 5%;
+    top: 15%;
+    right: 8%;
     position: absolute;
     img {
       width: 100%;

@@ -1,9 +1,11 @@
 import styles from "../header/Header.module.scss";
 import headset from "../../../assets/images/blue-headsets.png";
+import { Icon } from "@iconify/react";
 const Header: React.FC = () => {
   return (
     <div className={styles.header}>
       <div>
+        <span>.</span>
         <span>.</span>
         <span>.</span>
         <span>.</span>
@@ -20,12 +22,21 @@ const Header: React.FC = () => {
         <div className={styles.text}>
           <p>Computer & accessories</p>
           <h2>JBL T460BT Black Headphones</h2>
-          <div>stars</div>
+          <div className={styles.stars}>
+            <Icon icon="ic:baseline-star" width={20} height={20} />
+            <Icon icon="ic:baseline-star" width={20} height={20} />
+            <Icon icon="ic:baseline-star" width={20} height={20} />
+            <Icon icon="ic:baseline-star" width={20} height={20} />
+            <Icon icon="ic:baseline-star" width={20} height={20} />
+          </div>
           <div className={styles.price}>
             <h3>$124.00</h3>
             <p>$250.00</p>
           </div>
-          <button>view more</button>
+          <div className={styles.view_more}>
+            View more
+            <Icon icon="mdi-light:arrow-right" width={20} height={20} />
+          </div>
         </div>
         <div className={styles.image}>
           <img src={headset} alt="headsets" />
