@@ -1,0 +1,32 @@
+@use "../../../styles/variables" as *;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    li {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      color: $primary-text-color;
+      cursor: default;
+      &:hover {
+        color: $accent-color-hover;
+      }
+    }
+  }
+  .logo {
+    width: 5%;
+    img {
+      width: 100%;
+    }
+  }
+}
