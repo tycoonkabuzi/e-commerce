@@ -1,0 +1,16 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@mixin buttons {
+  border: none;
+  border: solid 1px $accent-color;
+  border-radius: 10px;
+  width: 20%;
+  height: 15%;
+  color: $accent-color;
+  margin-top: $global-standard-margin;
+  &:hover {
+    background-color: $accent-color-hover;
+    color: white;
+  }
+}
