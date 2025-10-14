@@ -1,0 +1,51 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/typography" as *;
+@use "../../../styles/mixins" as *;
+@use "../../../styles/buttons" as *;
+.header {
+  background-color: rgb(232, 232, 232);
+  color: $primary-text-color;
+  display: flex;
+  box-sizing: border-box;
+  padding: $bigger-padding;
+  gap: 5%;
+  align-items: center;
+  span {
+    display: block;
+    font-size: 40px;
+  }
+  .shop_hero {
+    width: 40%;
+  }
+  .sample_product {
+    background-color: $card-color;
+    padding: $card-padding;
+    display: flex;
+    @include border-circular;
+
+    .text {
+      width: 60%;
+      position: relative;
+      .price {
+        display: flex;
+        gap: 5%;
+        p {
+          color: $secondary-text-color;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+  .btn {
+    @include buttons;
+  }
+  .image {
+    width: 30%;
+    top: 30%;
+    right: 5%;
+    position: absolute;
+    img {
+      width: 100%;
+    }
+  }
+}

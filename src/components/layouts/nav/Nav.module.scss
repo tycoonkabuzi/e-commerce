@@ -1,11 +1,10 @@
 @use "../../../styles/variables" as *;
+@use "../../../styles/typography" as *;
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 4%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: $global-standard-padding;
 
   ul {
     display: flex;
