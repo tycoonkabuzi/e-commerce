@@ -46,7 +46,7 @@ const Header: React.FC = () => {
             <h3>$124.00</h3>
             <p>$250.00</p>
           </div>
-          <div className={styles.view_more}>
+          <div className={` ${styles.view_more} ${styles.small_paragraph} `}>
             View more
             <Icon icon="mdi-light:arrow-right" width={20} height={20} />
           </div>

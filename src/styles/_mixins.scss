@@ -10,3 +10,8 @@
     width: 100%;
   }
 }
+
+@mixin flexFacility {
+  display: flex;
+  align-items: center;
+}
