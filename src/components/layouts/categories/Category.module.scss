@@ -1,5 +1,35 @@
 @use "../../../styles//variables" as *;
-
+@use "../../../styles//mixins" as *;
+@use "../../../styles/typography" as *;
 .categories {
+  width: 80%;
+  margin: auto;
   margin-top: $space-lg;
+  .titles {
+    @include flexFacility;
+    justify-content: space-between;
+  }
+  .items_hero {
+    margin-top: $space-md;
+    @include flexFacility;
+    justify-content: space-between;
+    .item {
+      background-color: $card-background-color;
+      width: 24%;
+      padding-top: $bigger-padding;
+      padding-bottom: $space-md;
+      padding-left: $space-md;
+      overflow: hidden;
+      .container_image {
+        width: 330px;
+        height: 35vh;
+        overflow: hidden;
+        img {
+          position: relative;
+          width: 100%;
+          right: -30%;
+        }
+      }
+    }
+  }
 }
