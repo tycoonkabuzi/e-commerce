@@ -1,0 +1,53 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+@use "../../../styles/typography" as *;
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: $space-lg;
+  padding-bottom: $space-lg;
+  gap: $space-lg;
+  background: linear-gradient(
+    to right,
+    $primary-personal-offer,
+    $secondary-personal-offer
+  );
+  .profile_hero {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    gap: $space-md;
+
+    box-sizing: border-box;
+    padding: 10px;
+
+    .profile {
+      width: 100px;
+      height: 100px;
+      @include round-profile;
+    }
+  }
+  .options_hero {
+    display: flex;
+
+    width: 60%;
+    justify-content: space-between;
+    .option_item {
+      display: flex;
+      align-items: center;
+      .option_image {
+        width: 100px;
+        img {
+          width: 100%;
+        }
+      }
+      .option_text {
+        p {
+          color: $secondary-text-color;
+        }
+      }
+    }
+  }
+}
