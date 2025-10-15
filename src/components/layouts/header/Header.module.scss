@@ -10,15 +10,36 @@
   box-sizing: border-box;
   padding: $bigger-padding;
   gap: 5%;
+  .main_button_selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px; // Outer circle size
+    height: 25px;
+    margin-bottom: $space-lg;
+    @include border-circular;
 
-  span {
-    display: block;
-    font-size: 40px;
+    span {
+      width: 5px;
+      height: 5px;
+      background-color: rgb(1, 1, 1);
+      @include border-circular;
+    }
+
+    &.selected_item {
+      border: 2px solid $accent-color;
+      span {
+        background-color: $accent-color;
+      }
+    }
   }
   .shop_hero {
     width: 40%;
     h1 {
       margin-bottom: $space-md;
+    }
+    p {
+      width: 80%;
     }
   }
   .sample_product {
@@ -34,6 +55,7 @@
         margin-bottom: $space-sm;
         font-weight: 500;
       }
+
       .price {
         display: flex;
         gap: 5%;

@@ -5,10 +5,23 @@ const Header: React.FC = () => {
   return (
     <div className={styles.header}>
       <div>
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
+        <div
+          className={`${styles.main_button_selection} ${styles.selected_item} `}
+        >
+          <span />
+        </div>
+
+        <div className={`${styles.main_button_selection} `}>
+          <span />
+        </div>
+
+        <div className={`${styles.main_button_selection} `}>
+          <span />
+        </div>
+
+        <div className={`${styles.main_button_selection} `}>
+          <span />
+        </div>
       </div>
       <div className={styles.shop_hero}>
         <h1>SHOP COMPUTERS & ACCESSORIES</h1>
