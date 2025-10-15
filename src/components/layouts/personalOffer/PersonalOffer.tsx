@@ -25,7 +25,7 @@ const PersonalOffer: React.FC = () => {
           </div>
           <div className={styles.option_text}>
             <h3>Your Orders </h3>
-            <p>view your orders</p>
+            <p className={styles.small_paragraph}>view your orders</p>
           </div>
         </div>
 
@@ -35,7 +35,7 @@ const PersonalOffer: React.FC = () => {
           </div>
           <div className={styles.option_text}>
             <h3>Your Orders </h3>
-            <p>view your orders</p>
+            <p className={styles.small_paragraph}>view your orders</p>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ const PersonalOffer: React.FC = () => {
           </div>
           <div className={styles.option_text}>
             <h3>Your Orders </h3>
-            <p>view your orders</p>
+            <p className={styles.small_paragraph}>view your orders</p>
           </div>
         </div>
       </div>

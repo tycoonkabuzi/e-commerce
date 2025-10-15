@@ -1,3 +1,4 @@
+@use "./variables" as *;
 h1 {
   font-weight: 600;
   font-size: 3rem;
@@ -9,4 +10,9 @@ h2 {
 .big_paragraph {
   font-size: 1.1rem;
   font-weight: 300;
+}
+.small_paragraph {
+  color: $secondary-text-color;
+  font-weight: 300;
+  font-size: 0.9rem;
 }

@@ -3,6 +3,7 @@
 @use "../../../styles/typography" as *;
 
 .section {
+  margin-top: $space-lg;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -41,11 +42,6 @@
         width: 100px;
         img {
           width: 100%;
-        }
-      }
-      .option_text {
-        p {
-          color: $secondary-text-color;
         }
       }
     }

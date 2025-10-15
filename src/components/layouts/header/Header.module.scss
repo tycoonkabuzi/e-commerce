@@ -11,8 +11,7 @@
   padding: $bigger-padding;
   gap: 5%;
   .main_button_selection {
-    display: flex;
-    align-items: center;
+    @include flexFacility;
     justify-content: center;
     width: 25px; // Outer circle size
     height: 25px;
@@ -45,7 +44,7 @@
   .sample_product {
     background-color: $card-color;
     padding: $card-padding;
-    display: flex;
+    @include flexFacility;
     @include border-circular;
     align-items: center;
     .text {
@@ -66,10 +65,7 @@
         }
       }
       .view_more {
-        display: flex;
-        align-items: center;
-        color: $secondary-text-color;
-        font-weight: 300;
+        @include flexFacility;
       }
       p {
         color: $secondary-text-color;
