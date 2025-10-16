@@ -1,5 +1,6 @@
 import styles from "../header/Header.module.scss";
 import headset from "../../../assets/images/blue-headsets.png";
+import CardText from "../cardText";
 
 const Header: React.FC = () => {
   return (
@@ -32,6 +33,12 @@ const Header: React.FC = () => {
         <button className={styles.btn}>View more</button>
       </div>
       <div className={styles.sample_product}>
+        <CardText
+          subtitle={"Computer & accessories"}
+          title={"JBL T460BT Black Headphones"}
+          price={"$124.00"}
+          previousPrice={"$250.00"}
+        />
         <div className={styles.image}>
           <img src={headset} alt="headsets" />
         </div>

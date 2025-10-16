@@ -5,9 +5,7 @@
 .banner_hero {
   @include flexFacility;
   justify-content: space-between;
-  margin: auto;
-  margin-top: $space-lg;
-  width: 90%;
+  @include global-layout-spacing;
 
   .items {
     @include flexFacility;
