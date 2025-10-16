@@ -1,20 +1,13 @@
 import styles from "./Category.module.scss";
 
-import { Icon } from "@iconify/react";
 import computer from "../../../assets/images/computer.png";
 import toys from "../../../assets/images/toys.png";
 import beauty from "../../../assets/images/beauty.png";
+import Menu from "../menu";
 const Category: React.FC = () => {
   return (
     <div className={styles.categories}>
-      <div className={styles.titles}>
-        <h3> Shop by categories</h3>
-        <h3 style={{ display: "flex" }}>
-          All departments
-          <Icon icon="mdi-light:arrow-right" width={25} height={25} />{" "}
-        </h3>
-      </div>
-
+      <Menu bigTitle={"Shop by categories"} smallTitle={" All departments"} />
       <div className={styles.items_hero}>
         <div className={styles.item}>
           <div className={styles.container_image}>

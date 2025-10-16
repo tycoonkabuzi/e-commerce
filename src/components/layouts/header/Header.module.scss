@@ -47,35 +47,6 @@
     @include flexFacility;
     @include border-circular;
     align-items: center;
-    .text {
-      width: 60%;
-      position: relative;
-      h2 {
-        margin-bottom: $space-sm;
-        font-weight: 500;
-      }
-
-      .price {
-        display: flex;
-        gap: 5%;
-        margin-bottom: $space-sm;
-        p {
-          color: $secondary-text-color;
-          text-decoration: line-through;
-        }
-      }
-      .view_more {
-        @include flexFacility;
-      }
-      p {
-        color: $secondary-text-color;
-        margin-bottom: $space-sm;
-      }
-      .stars {
-        color: $accent-color;
-        margin-bottom: $space-sm;
-      }
-    }
   }
   .btn {
     @include buttons;
