@@ -2,13 +2,8 @@
 @use "../../../styles//mixins" as *;
 @use "../../../styles/typography" as *;
 .categories {
-  width: 90%;
-  margin: auto;
-  margin-top: $space-lg;
-  .titles {
-    @include flexFacility;
-    justify-content: space-between;
-  }
+  @include global-layout-spacing;
+
   .items_hero {
     margin-top: $space-md;
     @include flexFacility;

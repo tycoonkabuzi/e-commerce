@@ -24,3 +24,9 @@
     $secondary-personal-offer
   );
 }
+
+@mixin global-layout-spacing {
+  width: 90%;
+  margin: auto;
+  margin-top: $space-lg;
+}
