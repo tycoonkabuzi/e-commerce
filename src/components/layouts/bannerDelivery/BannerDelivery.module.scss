@@ -1,0 +1,26 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+@use "../../../styles/typography" as *;
+@use "../../../styles/buttons" as *;
+.banner_delivery {
+  width: 90%;
+  background-color: $card-background-color;
+  margin: auto;
+  margin-top: $space-lg;
+  padding: $space-lg;
+  justify-content: space-between;
+  gap: 20%;
+  @include flexFacility;
+  align-items: center;
+  .container_image {
+    width: 70%;
+    height: 40vh;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .btn {
+    @include buttons;
+  }
+}

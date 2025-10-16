@@ -5,9 +5,9 @@
   align-self: flex-start;
   border: none;
   border: solid 1px $accent-color;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   width: 20%;
-  height: 15%;
+  padding: $space-sm;
   color: $accent-color;
   margin-top: $global-standard-margin;
   &:hover {
