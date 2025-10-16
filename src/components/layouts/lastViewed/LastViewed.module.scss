@@ -3,4 +3,17 @@
 
 .lastViewed {
   @include global-layout-spacing;
+
+  .container_items {
+    @include flexFacility;
+    justify-content: space-between;
+    .item {
+      background-color: $card-background-color;
+      width: 23%;
+      padding: $space-lg;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -6,7 +6,7 @@ const Menu = ({
   smallTitle,
 }: {
   bigTitle: string;
-  smallTitle: string;
+  smallTitle?: string;
 }) => {
   return (
     <div className={styles.titles}>
