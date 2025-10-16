@@ -21,7 +21,7 @@
     span {
       width: 5px;
       height: 5px;
-      background-color: rgb(1, 1, 1);
+      background-color: $secondary-text-color;
       @include border-circular;
     }
 
