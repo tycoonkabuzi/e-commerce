@@ -16,3 +16,9 @@ h2 {
   font-weight: 300;
   font-size: 0.9rem;
 }
+h1,
+h2,
+h3,
+p {
+  margin-bottom: $space-sm;
+}
