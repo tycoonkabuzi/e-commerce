@@ -9,7 +9,7 @@ const CardText = ({
   subtitle: string;
   title: string;
   price: string;
-  previousPrice: string;
+  previousPrice?: string;
 }) => {
   return (
     <div className={styles.text}>
