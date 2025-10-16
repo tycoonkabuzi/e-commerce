@@ -8,10 +8,6 @@
   margin: auto;
   margin-top: $space-lg;
   width: 90%;
-  h3,
-  p {
-    margin-bottom: $space-sm;
-  }
 
   .items {
     @include flexFacility;

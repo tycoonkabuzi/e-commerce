@@ -1,0 +1,5 @@
+@use "../../../styles/mixins" as *;
+.titles {
+  @include flexFacility;
+  justify-content: space-between;
+}
