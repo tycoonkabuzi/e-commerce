@@ -1,0 +1,33 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+@use "../../../styles/typography" as *;
+
+.banner_hero {
+  @include flexFacility;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: $space-lg;
+  width: 90%;
+  h3,
+  p {
+    margin-bottom: $space-sm;
+  }
+
+  .items {
+    @include flexFacility;
+    @include gradient;
+    width: 49.3%;
+    height: 20vh;
+    padding: $space-md;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 20%;
+    .container_image {
+      width: 60%;
+      margin-right: -15%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

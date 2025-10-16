@@ -1,4 +1,5 @@
 import "./App.css";
+import BannerSales from "./components/layouts/bannerSales";
 import Category from "./components/layouts/categories";
 import Header from "./components/layouts/header";
 import Nav from "./components/layouts/nav";
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <PersonalOffer />
       <Category />
+      <BannerSales />
     </>
   );
 }
