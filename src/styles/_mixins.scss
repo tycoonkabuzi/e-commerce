@@ -1,3 +1,4 @@
+@use "./variables" as *;
 @mixin border-circular {
   border-radius: 20px;
 }
@@ -14,4 +15,13 @@
 @mixin flexFacility {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin gradient {
+  background: linear-gradient(
+    to right,
+    $primary-personal-offer,
+    $secondary-personal-offer
+  );
 }

@@ -10,11 +10,7 @@
   padding-top: $space-lg;
   padding-bottom: $space-lg;
   gap: $space-lg;
-  background: linear-gradient(
-    to right,
-    $primary-personal-offer,
-    $secondary-personal-offer
-  );
+  @include gradient;
   .profile_hero {
     display: flex;
     align-items: center;
