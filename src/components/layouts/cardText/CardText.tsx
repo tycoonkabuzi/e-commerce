@@ -5,11 +5,13 @@ const CardText = ({
   title,
   price,
   previousPrice,
+  button,
 }: {
   subtitle: string;
   title: string;
   price: string;
   previousPrice?: string;
+  button?: string;
 }) => {
   return (
     <div className={styles.text}>
@@ -26,10 +28,15 @@ const CardText = ({
         <h3>{price}</h3>
         <p>{previousPrice}</p>
       </div>
-      <div className={` ${styles.view_more} ${styles.small_paragraph} `}>
-        View more
-        <Icon icon="mdi-light:arrow-right" width={20} height={20} />
-      </div>
+
+      {button ? (
+        <div className={` ${styles.view_more} ${styles.small_paragraph} `}>
+          {button}
+          <Icon icon="mdi-light:arrow-right" width={20} height={20} />
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

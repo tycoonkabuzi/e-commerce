@@ -38,6 +38,7 @@ const Header: React.FC = () => {
           title={"JBL T460BT Black Headphones"}
           price={"$124.00"}
           previousPrice={"$250.00"}
+          button={"View more"}
         />
         <div className={styles.image}>
           <img src={headset} alt="headsets" />
