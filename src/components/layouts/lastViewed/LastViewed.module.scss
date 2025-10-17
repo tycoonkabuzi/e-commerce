@@ -9,8 +9,9 @@
     justify-content: space-between;
     .item {
       background-color: $card-background-color;
-      width: 23%;
-      padding: $space-lg;
+      width: 19%;
+      box-sizing: border-box;
+      padding: $space-md;
       img {
         width: 100%;
       }

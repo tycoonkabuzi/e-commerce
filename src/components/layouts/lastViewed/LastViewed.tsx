@@ -49,6 +49,16 @@ const LastViewed = () => {
             price={"$150"}
           />
         </div>
+        <div className={styles.item}>
+          <div>
+            <img src={airforce} alt="nike air force" />
+          </div>
+          <CardText
+            subtitle={"Ship to Poland"}
+            title={"Nike Airman light"}
+            price={"$150"}
+          />
+        </div>
       </div>
     </div>
   );
