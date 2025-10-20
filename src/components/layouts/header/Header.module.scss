@@ -2,62 +2,66 @@
 @use "../../../styles/typography" as *;
 @use "../../../styles/mixins" as *;
 @use "../../../styles/buttons" as *;
-
-.header {
-  background-color: rgb(232, 232, 232);
-  color: $primary-text-color;
-  display: flex;
-  box-sizing: border-box;
-  padding: $bigger-padding;
-  gap: 5%;
-  .main_button_selection {
-    @include flexFacility;
-    justify-content: center;
-    width: 25px; // Outer circle size
-    height: 25px;
-    margin-bottom: $space-lg;
-    @include border-circular;
-
-    span {
-      width: 5px;
-      height: 5px;
-      background-color: $secondary-text-color;
+.header_hero {
+  height: 70vh;
+  background-color: red;
+  overflow: hidden;
+  .header {
+    background-color: rgb(232, 232, 232);
+    color: $primary-text-color;
+    display: flex;
+    box-sizing: border-box;
+    padding: $bigger-padding;
+    gap: 5%;
+    .main_button_selection {
+      @include flexFacility;
+      justify-content: center;
+      width: 25px; // Outer circle size
+      height: 25px;
+      margin-bottom: $space-lg;
       @include border-circular;
-    }
 
-    &.selected_item {
-      border: 2px solid $accent-color;
       span {
-        background-color: $accent-color;
+        width: 5px;
+        height: 5px;
+        background-color: $secondary-text-color;
+        @include border-circular;
+      }
+
+      &.selected_item {
+        border: 2px solid $accent-color;
+        span {
+          background-color: $accent-color;
+        }
       }
     }
-  }
-  .shop_hero {
-    width: 40%;
-    h1 {
-      margin-bottom: $space-md;
+    .shop_hero {
+      width: 40%;
+      h1 {
+        margin-bottom: $space-md;
+      }
+      p {
+        width: 80%;
+      }
     }
-    p {
-      width: 80%;
+    .sample_product {
+      background-color: $card-color;
+      padding: $card-padding;
+      @include flexFacility;
+      @include border-circular;
+      align-items: center;
     }
-  }
-  .sample_product {
-    background-color: $card-color;
-    padding: $card-padding;
-    @include flexFacility;
-    @include border-circular;
-    align-items: center;
-  }
-  .btn {
-    @include buttons;
-  }
-  .image {
-    width: 30%;
-    top: 15%;
-    right: 8%;
-    position: absolute;
-    img {
-      width: 100%;
+    .btn {
+      @include buttons;
+    }
+    .image {
+      width: 30%;
+      top: 15%;
+      right: 8%;
+      position: absolute;
+      img {
+        width: 100%;
+      }
     }
   }
 }
