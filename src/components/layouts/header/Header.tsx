@@ -1,7 +1,7 @@
 import styles from "../header/Header.module.scss";
 import headset from "../../../assets/images/blue-headsets.png";
 import CardText from "../cardText";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header: React.FC = () => {
   const [current, setCurrent] = useState("first");
@@ -9,6 +9,18 @@ const Header: React.FC = () => {
   const moveHeader = (current: string): void => {
     setCurrent(current);
   };
+  const changeRadioButton = () => {
+    const options = ["first", "second", "third", "fourth"];
+    let index = 0;
+    let interval = setInterval(() => {
+      setCurrent(options[index]);
+      index++;
+    }, 5000);
+    return interval;
+  };
+  useEffect(() => {
+    changeRadioButton();
+  }, []);
   return (
     <div
       className={`${styles.header_hero} ${
