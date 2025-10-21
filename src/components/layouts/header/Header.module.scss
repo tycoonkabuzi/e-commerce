@@ -2,17 +2,20 @@
 @use "../../../styles/typography" as *;
 @use "../../../styles/mixins" as *;
 @use "../../../styles/buttons" as *;
+
 .header_hero {
   height: 70vh;
-  background-color: red;
+  position: relative;
+  background-color: rgb(106, 0, 255);
   overflow: hidden;
-  .header {
-    background-color: rgb(232, 232, 232);
-    color: $primary-text-color;
-    display: flex;
-    box-sizing: border-box;
-    padding: $bigger-padding;
-    gap: 5%;
+  .radio_button {
+    width: 5%;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
     .main_button_selection {
       @include flexFacility;
       justify-content: center;
@@ -35,32 +38,56 @@
         }
       }
     }
-    .shop_hero {
-      width: 40%;
-      h1 {
-        margin-bottom: $space-md;
+  }
+  .header_moved_up {
+    transform: translateY(-25%);
+    transition: ease-in-out 1s;
+  }
+  .header_moved_more {
+    transform: translateY(-50%);
+    transition: ease-in-out 1s;
+  }
+  .header_moved_top {
+    transform: translateY(-75%);
+  }
+  .container_header {
+    transition: ease-in-out 1s;
+    .header {
+      background-color: rgb(232, 232, 232);
+      color: $primary-text-color;
+      display: flex;
+      box-sizing: border-box;
+      padding: $bigger-padding;
+      gap: 5%;
+      position: relative;
+
+      .shop_hero {
+        width: 40%;
+        h1 {
+          margin-bottom: $space-md;
+        }
+        p {
+          width: 80%;
+        }
       }
-      p {
-        width: 80%;
+      .sample_product {
+        background-color: $card-color;
+        padding: $card-padding;
+        @include flexFacility;
+        @include border-circular;
+        align-items: center;
       }
-    }
-    .sample_product {
-      background-color: $card-color;
-      padding: $card-padding;
-      @include flexFacility;
-      @include border-circular;
-      align-items: center;
-    }
-    .btn {
-      @include buttons;
-    }
-    .image {
-      width: 30%;
-      top: 15%;
-      right: 8%;
-      position: absolute;
-      img {
-        width: 100%;
+      .btn {
+        @include buttons;
+      }
+      .image {
+        width: 30%;
+        top: 15%;
+        right: 8%;
+        position: absolute;
+        img {
+          width: 100%;
+        }
       }
     }
   }
