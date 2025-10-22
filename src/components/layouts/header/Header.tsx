@@ -11,10 +11,15 @@ const Header: React.FC = () => {
   };
   const changeRadioButton = () => {
     const options = ["first", "second", "third", "fourth"];
-    let index = 0;
+    let index = options.indexOf(current);
     let interval = setInterval(() => {
-      setCurrent(options[index]);
       index++;
+      setCurrent(options[index]);
+
+      if (index === options.length) {
+        index = 0;
+      }
+      console.log(`This is the current ${options.indexOf(current)}`);
     }, 5000);
     return interval;
   };
@@ -100,7 +105,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        <div className={styles.header} style={{ backgroundColor: "yellow" }}>
+        <div className={styles.header} style={{ backgroundColor: "white" }}>
           <div className={styles.shop_hero}>
             <h1>SHOP COMPUTERS & ACCESSORIES 2</h1>
             <p>
@@ -123,7 +128,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        <div className={styles.header} style={{ backgroundColor: "blue" }}>
+        <div className={styles.header} style={{ backgroundColor: "green" }}>
           <div className={styles.shop_hero}>
             <h1>SHOP COMPUTERS & ACCESSORIES 3</h1>
             <p>
