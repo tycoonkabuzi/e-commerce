@@ -15,3 +15,23 @@
     color: white;
   }
 }
+
+.btn {
+  background-color: $btn-color;
+  align-items: center;
+  padding-bottom: $space-sm;
+  padding-top: $space-sm;
+  justify-content: space-between;
+  width: 96%;
+  padding-left: $space-sm;
+  padding-right: $space-sm;
+  border-style: none;
+  @include flexFacility;
+  @include border-small-radius;
+}
+.btn_notification {
+  background-color: $color-notification;
+  color: $card-color;
+  @include border-small-radius;
+  padding: ($space-sm)-6;
+}
