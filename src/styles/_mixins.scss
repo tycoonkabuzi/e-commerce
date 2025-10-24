@@ -11,6 +11,9 @@
     width: 100%;
   }
 }
+@mixin border-small-radius {
+  border-radius: 5px;
+}
 
 @mixin flexFacility {
   display: flex;
