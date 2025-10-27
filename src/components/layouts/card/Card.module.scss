@@ -1,3 +1,16 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/mixins" as *;
 @use "../../../styles/buttons" as *;
+
+.card {
+  width: 20%;
+  .card_image {
+    width: 200px;
+    height: 200px;
+    @include border-medium-radius;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
