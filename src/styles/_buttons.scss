@@ -17,7 +17,7 @@
 }
 
 .btn {
-  background-color: $btn-color;
+  background-color: lighten ($btn-color, 30%);
   align-items: center;
   padding-bottom: $space-sm;
   padding-top: $space-sm;
