@@ -13,7 +13,9 @@ function App() {
 
       <div>
         <FilterSection />
-        <Card />
+        <div>
+          <Card /> <Card /> <Card />
+        </div>
       </div>
     </>
   );
