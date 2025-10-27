@@ -3,47 +3,61 @@
 @use "../../../styles/buttons" as *;
 
 .category {
-  background-color: rgb(231, 231, 231);
   width: 15%;
   height: 50vh;
   padding: $space-sm;
   margin-left: $space-lg;
-  .lines_hero {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    button {
-      @include flexFacility;
-    }
-    .vertical_line {
-      width: 1px;
-      height: 130px;
-      background-color: black;
-      margin-left: $space-md;
-    }
 
-    .menu_list {
-      margin-top: 20px;
+  .colapse {
+    overflow: hidden;
+    .hide {
+      transform: translateY(-200px);
+      transition: ease-in-out 0.3s;
+    }
+    .show {
+      transform: translateY(0);
+      transition: ease-in-out 0.3s;
+    }
+    .lines_hero {
       display: flex;
-      flex-direction: column;
-      gap: 30px;
+      align-items: flex-start;
+      position: relative;
 
-      .item {
+      button {
+        @include flexFacility;
+        overflow: hidden;
+      }
+
+      .vertical_line {
+        width: 1px;
+        height: 130px;
+        background-color: black;
+        margin-left: $space-md;
+      }
+
+      .menu_list {
+        margin-top: 20px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        gap: 30px;
 
-        .horizontal_line {
-          width: 20px;
-          height: 1px;
-          background-color: black;
-          margin-right: 10px;
-        }
+        .item {
+          display: flex;
+          align-items: center;
 
-        button {
-          background: none;
-          border: none;
-          font-size: 14px;
-          cursor: pointer;
+          .horizontal_line {
+            width: 20px;
+            height: 1px;
+            background-color: black;
+            margin-right: 10px;
+          }
+
+          button {
+            background: none;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+          }
         }
       }
     }
