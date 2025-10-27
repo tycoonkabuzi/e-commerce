@@ -1,12 +1,12 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/mixins" as *;
 @use "../../../styles/buttons" as *;
+@use "../../../styles/typography" as *;
 
 .category {
   width: 15%;
   height: 50vh;
   padding: $space-sm;
-  margin-left: $space-lg;
 
   .colapse {
     overflow: hidden;
