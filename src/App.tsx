@@ -1,8 +1,8 @@
 import "./App.css";
+import Card from "./components/layouts/card";
 import FilterSection from "./components/layouts/filterSection";
 import HeaderWithSearch from "./components/layouts/headerWithSearch";
 import Nav from "./components/layouts/nav";
-import Home from "./components/pages/Home";
 
 function App() {
   return (
@@ -10,7 +10,11 @@ function App() {
       {/* <Home /> */}
       <Nav />
       <HeaderWithSearch />
-      <FilterSection />
+
+      <div>
+        <FilterSection />
+        <Card />
+      </div>
     </>
   );
 }

@@ -14,6 +14,9 @@
 @mixin border-small-radius {
   border-radius: 5px;
 }
+@mixin border-medium-radius {
+  border-radius: 20px;
+}
 
 @mixin flexFacility {
   display: flex;
@@ -32,4 +35,7 @@
   width: 90%;
   margin: auto;
   margin-top: $space-lg;
+}
+@mixin border_secondary {
+  border: 0.3px solid $secondary-text-color;
 }

@@ -15,19 +15,34 @@
     color: white;
   }
 }
-
+@mixin btn-main {
+  border-style: none;
+  padding: $space-sm;
+  @include border-medium-radius;
+  padding-left: $space-md;
+  padding-right: $space-md;
+}
 .btn {
   background-color: lighten ($btn-color, 30%);
-  align-items: center;
-  padding-bottom: $space-sm;
-  padding-top: $space-sm;
   justify-content: space-between;
+  align-items: center;
   width: 96%;
-  padding-left: $space-sm;
-  padding-right: $space-sm;
-  border-style: none;
+  @include btn-main;
   @include flexFacility;
   @include border-small-radius;
+}
+.btn_primary {
+  @include btn-main;
+  background-color: $primary-text-color;
+  color: $card-color;
+
+  &:hover {
+    background-color: lighten ($primary-text-color, 10%);
+  }
+}
+.btn_secondary {
+  @include btn-main;
+  @include border_secondary;
 }
 .btn_notification {
   background-color: $color-notification;

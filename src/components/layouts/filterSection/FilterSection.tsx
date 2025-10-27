@@ -8,7 +8,7 @@ const FilterSection: React.FC = () => {
   };
   return (
     <div className={styles.category}>
-      <h2>Category</h2>
+      <h2 className={styles.medium_title}>Category</h2>
       <button className={styles.btn}>
         <Icon icon="line-md:folder-multiple-filled" width={20} height={20} />
         All products
