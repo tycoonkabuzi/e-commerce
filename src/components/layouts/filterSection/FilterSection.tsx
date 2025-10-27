@@ -3,9 +3,8 @@ import styles from "./FilterSection.module.scss";
 import { Icon } from "@iconify/react";
 const FilterSection: React.FC = () => {
   const [fold, setFold] = useState<Boolean>(false);
-  const handleClickFold = () => {
-    setFold(!fold);
-    console.log(fold);
+  const handleClickFold = (): void => {
+    setFold((prev) => !prev);
   };
   return (
     <div className={styles.category}>
