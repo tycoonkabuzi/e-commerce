@@ -6,26 +6,6 @@
   @include flexFacility;
   justify-content: space-between;
   .form {
-    .input_wrapper {
-      position: relative;
-      .search_icon {
-        position: absolute;
-        top: 23%;
-        left: 2%;
-      }
-      input {
-        @include border-medium-radius;
-        width: 500px;
-        height: 40px;
-        border-style: none;
-        @include border-secondary;
-        padding-left: $space-lg;
-      }
-      button {
-        position: absolute;
-        left: 83.5%;
-        top: 5%;
-      }
-    }
+    @include small_form;
   }
 }
