@@ -4,13 +4,21 @@
 
 .card {
   width: 20%;
+  margin: auto;
+  margin-bottom: $space-lg;
   .card_image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    margin-bottom: $space-sm;
     @include border-medium-radius;
     overflow: hidden;
     img {
       width: 100%;
     }
+  }
+  .button_hero {
+    @include flexFacility;
+    justify-content: space-between;
+    width: 110%;
   }
 }
