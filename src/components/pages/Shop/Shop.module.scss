@@ -1,0 +1,20 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+.shop {
+  width: 90%;
+  margin: auto;
+  margin-top: $space-lg * 2;
+  .section_shop {
+    @include flexFacility;
+    justify-content: space-between;
+    align-items: normal;
+    gap: 5%;
+    margin-top: $space-md;
+    .cards {
+      @include flexFacility;
+      flex-wrap: wrap;
+      width: 90%;
+      gap: 8%;
+    }
+  }
+}

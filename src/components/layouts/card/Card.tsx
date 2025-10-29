@@ -9,7 +9,7 @@ const Card: React.FC = () => {
         <img src={image} alt="" />
       </div>
       <CardText subtitle="Reviewed" title="Iphone 15 pro" price="$200" />
-      <div>
+      <div className={styles.button_hero}>
         <button className={styles.btn_secondary}>Add to Chart</button>
         <button className={styles.btn_primary}>Buy Now</button>
       </div>
