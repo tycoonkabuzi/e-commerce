@@ -3,6 +3,7 @@ import FilterSection from "../../layouts/filterSection";
 import HeaderWithSearch from "../../layouts/headerWithSearch";
 import styles from "./Shop.module.scss";
 import Nav from "../../layouts/nav";
+import NewsLetter from "../../layouts/newsletter";
 
 const Shop: React.FC = () => {
   return (
@@ -10,7 +11,6 @@ const Shop: React.FC = () => {
       <Nav />
       <div className={styles.shop}>
         <HeaderWithSearch />
-
         <div className={styles.section_shop}>
           <FilterSection />
           <div className={styles.cards}>
@@ -20,6 +20,7 @@ const Shop: React.FC = () => {
             <Card />
           </div>
         </div>
+        <NewsLetter />
       </div>
     </>
   );
