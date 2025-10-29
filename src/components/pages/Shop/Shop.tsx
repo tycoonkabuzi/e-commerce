@@ -22,8 +22,8 @@ const Shop: React.FC = () => {
           </div>
         </div>
         <NewsLetter />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

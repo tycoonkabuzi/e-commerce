@@ -1,0 +1,43 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+@use "../../../styles/buttons" as *;
+@use "../../../styles/typography" as *;
+
+.footer {
+  background-color: rgb(241, 245, 246);
+  margin-top: $space-lg * 2;
+  padding: $space-lg;
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+  .footer_wrap {
+    @include flexFacility;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    @include border-secondary;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: $space-lg * 2;
+    .image_container {
+      width: 30%;
+      img {
+        width: 40%;
+      }
+    }
+    .links_hero {
+      width: 60%;
+      @include flexFacility;
+      justify-content: space-between;
+    }
+  }
+  .copyright {
+    display: block;
+    text-align: center;
+    padding: $space-md;
+  }
+}
