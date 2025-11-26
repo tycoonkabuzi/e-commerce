@@ -7,6 +7,7 @@ import ProductSection from "../../layouts/productSection";
 import ReusableBanner from "../../layouts/reusableBanner";
 import delivery from "../../../assets/images/delivery.png";
 import woman from "../../../assets/images/woman.png";
+import Footer from "../../layouts/footer";
 
 const Home: React.FC = () => {
   const lastViewed = [
@@ -164,6 +165,7 @@ const Home: React.FC = () => {
         smallTitle={"see more"}
         cards={suggestions}
       />
+      <Footer />
     </>
   );
 };

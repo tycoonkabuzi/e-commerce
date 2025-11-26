@@ -11,7 +11,7 @@ const Menu = ({
   return (
     <div className={styles.titles}>
       <h3> {bigTitle}</h3>
-      <h3 style={{ display: "flex" }}>
+      <h3 className={styles.small_paragraph} style={{ display: "flex" }}>
         {smallTitle}
         <Icon icon="mdi-light:arrow-right" width={25} height={25} />{" "}
       </h3>

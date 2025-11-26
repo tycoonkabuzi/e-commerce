@@ -1,5 +1,6 @@
 import styles from "./Footer.module.scss";
 import logo from "../../../assets/icons/toni-light-blue-full.png";
+import { Icon } from "@iconify/react";
 
 const Footer: React.FC = () => {
   return (
@@ -39,9 +40,16 @@ const Footer: React.FC = () => {
           <div>
             <h1 className={styles.medium_title}>PAYMENT METHOD</h1>
             <ul>
-              <li>FAQs</li>
-              <li>Cookies Policy</li>
-              <li>Terms of Use</li>
+              <li>
+                <Icon icon="logos:visa" width="48" />
+              </li>
+              <li>
+                <Icon icon="logos:mastercard" width="30" />
+              </li>
+
+              <li>
+                <Icon icon="logos:paypal" width="20" />
+              </li>
             </ul>
           </div>
         </div>
