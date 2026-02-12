@@ -15,9 +15,6 @@ const Shop: React.FC = () => {
         <div className={styles.section_shop}>
           <FilterSection />
           <div className={styles.cards}>
-            <Card /> <Card /> <Card />
-            <Card />
-            <Card />
             <Card />
           </div>
         </div>
