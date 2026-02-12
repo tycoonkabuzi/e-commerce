@@ -1,12 +1,15 @@
 import "./styles/main.scss";
 import Home from "./components/pages/Home";
 import Shop from "./components/pages/Shop";
-import ExerciceComponent from "./components/pages/ExerciceComponent";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <ExerciceComponent />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+      </Routes>
     </>
   );
 }
