@@ -1,6 +1,5 @@
 import styles from "./Card.module.scss";
 import CardText from "../cardText";
-import image from "../../../assets/images/testImage.jpg";
 import { useEffect, useState } from "react";
 
 const Card: React.FC = () => {
@@ -18,6 +17,8 @@ const Card: React.FC = () => {
     fetchData();
   }, []);
   console.log(data);
+
+  // map data from the api
   return (
     <>
       {data?.products ? (

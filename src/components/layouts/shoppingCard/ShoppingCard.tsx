@@ -1,7 +1,17 @@
+import { useState } from "react";
 import image from "../../../assets/images/box.png";
 import style from "./ShoppingCard.module.scss";
 
 const ShoppingCard = () => {
+  const [counter, setCounter] = useState(1);
+
+  const increase = () => {
+    setCounter(counter + 1);
+  };
+
+  const decrease = () => {
+    setCounter((prev) => (prev > 0 ? prev - 1 : prev));
+  };
   return (
     <div className={style.card}>
       <h1>Your card</h1>
@@ -14,36 +24,13 @@ const ShoppingCard = () => {
           <p> 2.50$</p>
         </div>
         <div>
-          <button className={style.cardButton}>-</button> 1
-          <button className={style.cardButton}>+</button>
-        </div>
-      </div>
-
-      <div className={style.cardItem}>
-        <div className={style.cardImage}>
-          <img src={image} />
-        </div>
-        <div className={style.text}>
-          <h2> Chapka</h2>
-          <p> 2.50$</p>
-        </div>
-        <div>
-          <button className={style.cardButton}>-</button> 1
-          <button className={style.cardButton}>+</button>
-        </div>
-      </div>
-
-      <div className={style.cardItem}>
-        <div className={style.cardImage}>
-          <img src={image} />
-        </div>
-        <div className={style.text}>
-          <h2> Chapka</h2>
-          <p> 2.50$</p>
-        </div>
-        <div>
-          <button className={style.cardButton}>-</button> 1
-          <button className={style.cardButton}>+</button>
+          <button className={style.cardButton} onClick={decrease}>
+            -
+          </button>
+          {counter}
+          <button className={style.cardButton} onClick={increase}>
+            +
+          </button>
         </div>
       </div>
 
