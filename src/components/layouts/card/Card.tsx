@@ -1,7 +1,8 @@
 import styles from "./Card.module.scss";
 import CardText from "../cardText";
 import { useEffect, useState } from "react";
-
+import { useDispatch } from "react-redux";
+import { addToCard } from "../../../redux/slices/cardSlice.jsx";
 const Card: React.FC = () => {
   const [data, setData] = useState();
   useEffect(() => {
@@ -16,7 +17,8 @@ const Card: React.FC = () => {
     };
     fetchData();
   }, []);
-  console.log(data);
+
+  const dispatch = useDispatch();
 
   // map data from the api
   return (
@@ -33,7 +35,12 @@ const Card: React.FC = () => {
               price={`${product.price} $`}
             />
             <div className={styles.button_hero}>
-              <button className={styles.btn_secondary}>Add to Chart</button>
+              <button
+                className={styles.btn_secondary}
+                onClick={() => dispatch(addToCard(product))}
+              >
+                Add to Chart
+              </button>
               <button className={styles.btn_primary}>Buy Now</button>
             </div>
           </div>
