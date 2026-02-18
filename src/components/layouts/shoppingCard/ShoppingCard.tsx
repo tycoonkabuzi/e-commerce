@@ -8,7 +8,7 @@ import {
 const ShoppingCard = () => {
   const items = useSelector((state) => state.card.items);
   const dispatch = useDispatch();
-  console.log(items);
+  console.log;
   return (
     <div className={style.card}>
       <h1>Your card</h1>
@@ -40,11 +40,15 @@ const ShoppingCard = () => {
             </div>
           ))
         : ""}
-      <div className={style.total}>
-        <p>subTotal: 200$</p>
-        <p>tax: 11$</p>
-        <p>total: 211$</p>
-      </div>
+      {items.length > 0 ? (
+        <div className={style.total}>
+          <p>subTotal: 200$</p>
+          <p>tax: 11$</p>
+          <p>total: 211$</p>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
