@@ -4,9 +4,19 @@ import style from "./Nav.module.scss";
 import { Outlet, useNavigate } from "react-router-dom";
 import ShoppingCard from "../shoppingCard";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 const Nav: React.FC = () => {
   const navigate = useNavigate();
   const [toggleCard, setToggleCard] = useState(false);
+  const items = useSelector((state) => state.card.items);
+
+  const total = items.reduce((starter, item) => starter + item.quantity, 0);
+
+  const countItemsHandler = () => {};
+  const handleToggleCard = () => {
+    setToggleCard(!toggleCard);
+  };
+
   return (
     <div>
       <div className={style.nav}>
@@ -30,17 +40,24 @@ const Nav: React.FC = () => {
           <li>
             <Icon icon="line-md:heart" width={25} height={25} />
           </li>
-          <li>
+          <li onClick={handleToggleCard}>
             <Icon
               icon="material-symbols:shopping-cart-outline"
               width={25}
               height={25}
             />
           </li>
+          {total > 0 ? (
+            <div className={`${style.btn_notification} ${style.notification}`}>
+              {total}
+            </div>
+          ) : (
+            ""
+          )}
         </ul>
       </div>
       <Outlet />
-      <ShoppingCard />
+      {toggleCard ? <ShoppingCard /> : ""}
     </div>
   );
 };

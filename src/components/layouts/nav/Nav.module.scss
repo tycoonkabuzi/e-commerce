@@ -1,5 +1,6 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/typography" as *;
+@use "../../../styles//buttons" as *;
 .nav {
   display: flex;
   align-items: center;
@@ -23,6 +24,12 @@
       &:hover {
         color: $accent-color-hover;
       }
+    }
+    .notification {
+      position: absolute;
+      right: 68px;
+      top: 2px;
+      font-size: 12px;
     }
   }
   .logo {
