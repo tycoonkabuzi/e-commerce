@@ -3,8 +3,10 @@ import logo from "../../../assets/icons/toni-black-full.png";
 import style from "./Nav.module.scss";
 import { Outlet, useNavigate } from "react-router-dom";
 import ShoppingCard from "../shoppingCard";
+import { useState } from "react";
 const Nav: React.FC = () => {
   const navigate = useNavigate();
+  const [toggleCard, setToggleCard] = useState(false);
   return (
     <div>
       <div className={style.nav}>
@@ -28,7 +30,7 @@ const Nav: React.FC = () => {
           <li>
             <Icon icon="line-md:heart" width={25} height={25} />
           </li>
-          <li onClick={() => navigate("/card")}>
+          <li>
             <Icon
               icon="material-symbols:shopping-cart-outline"
               width={25}
