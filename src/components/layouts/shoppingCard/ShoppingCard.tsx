@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./ShoppingCard.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -8,7 +8,23 @@ import {
 const ShoppingCard = () => {
   const items = useSelector((state) => state.card.items);
   const dispatch = useDispatch();
-  console.log;
+  const [totalPrice, setTotalPrice] = useState({});
+
+  useEffect(() => {
+    const calculateTotal = () => {
+      const total = items.reduce((acc, item) => {
+        return acc + item.price * item.quantity;
+      }, 0);
+
+      const tva = Math.floor((total * 16) / 100);
+      setTotalPrice({
+        subTotal: total,
+        tva: tva,
+        total: Math.floor(total + tva),
+      });
+    };
+    calculateTotal();
+  }, [items]);
   return (
     <div className={style.card}>
       <h1>Your card</h1>
@@ -40,14 +56,15 @@ const ShoppingCard = () => {
             </div>
           ))
         : ""}
-      {items.length > 0 ? (
+
+      {totalPrice.total > 0 ? (
         <div className={style.total}>
-          <p>subTotal: 200$</p>
-          <p>tax: 11$</p>
-          <p>total: 211$</p>
+          <p>subTotal:{totalPrice.subTotal} $ </p>
+          <p>tax: {totalPrice.tva}$</p>
+          <p>total: {totalPrice.total}$</p>
         </div>
       ) : (
-        ""
+        <p style={{ textAlign: "center" }}>Your card is currently empty</p>
       )}
     </div>
   );

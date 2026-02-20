@@ -126,7 +126,6 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Nav />
       <Header />
       <PersonalOffer />
       <Category />
