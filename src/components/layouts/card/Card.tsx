@@ -25,7 +25,7 @@ const Card: React.FC = () => {
     <>
       {data?.products ? (
         data.products.map((product) => (
-          <div className={styles.card}>
+          <div key={product.id} className={styles.card}>
             <div className={styles.card_image}>
               <img src={product.thumbnail} alt="" />
             </div>

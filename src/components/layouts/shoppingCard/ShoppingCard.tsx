@@ -30,7 +30,7 @@ const ShoppingCard = () => {
       <h1>Your card</h1>
       {items
         ? items.map((item) => (
-            <div className={style.cardItem}>
+            <div key={item.id} className={style.cardItem}>
               <div className={style.cardImage}>
                 <img src={item.thumbnail} />
               </div>
