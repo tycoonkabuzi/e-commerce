@@ -34,28 +34,24 @@ const FilterSection: React.FC = () => {
             <div className={styles.item}>
               <div className={styles.horizontal_line}></div>
               <button>
-                <Icon icon="ic:baseline-man" width={20} height={20} />
-                For Men
+                <Icon icon="mdi:lipstick" width={20} height={20} />
+                Beauty
               </button>
             </div>
 
             <div className={styles.item}>
               <div className={styles.horizontal_line}></div>
               <button>
-                <Icon icon="ic:baseline-woman" width={20} height={20} />
-                For Women
+                <Icon icon="mdi:bottle-tonic" width={20} height={20} />
+                Fragrances
               </button>
             </div>
 
             <div className={styles.item}>
               <div className={`${styles.horizontal_line} `}></div>
               <button>
-                <Icon
-                  icon="ic:baseline-electrical-services"
-                  width={20}
-                  height={20}
-                />
-                Electronics
+                <Icon icon="mdi:food-apple" width={20} height={20} />
+                Groceries
               </button>
             </div>
           </div>

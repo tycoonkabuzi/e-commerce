@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { addToCard } from "../../../redux/slices/cardSlice.jsx";
 const Card: React.FC = () => {
   const [data, setData] = useState();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,7 +18,9 @@ const Card: React.FC = () => {
     };
     fetchData();
   }, []);
-
+  //console.log(data?.products[1].category);
+  const categories = data?.products.map((product) => product.category);
+  console.log(categories);
   const dispatch = useDispatch();
 
   // map data from the api
